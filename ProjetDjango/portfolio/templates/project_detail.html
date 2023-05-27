@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ project.title }}</h1>
+  <p><strong>Client:</strong> {{ project.client }}</p>
+  <p><strong>Description:</strong> {{ project.description }}</p>
+  <p><strong>Services:</strong> {{ project.services }}</p>
+  <p><strong>Completion date:</strong> {{ project.completion_date }}</p>
+  <!-- display project images -->
+  {% if project.images %}
+    {% for image in project.images.all %}
+      <img src="{{ image.image.url }}" alt="{{ image.description }}">
+    {% endfor %}
+  {% endif %}
+{% endblock %}
