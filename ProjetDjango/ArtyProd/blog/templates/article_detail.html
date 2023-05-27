@@ -1,0 +1,16 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+
+{% block content %}
+  <h1 class="mb-4">Détails de l'article</h1>
+
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">{{ article.title }}</h2>
+      <p class="card-text">{{ article.content }}</p>
+      <p class="card-text"><strong>Auteur :</strong> {{ article.author }}</p>
+      <p class="card-text"><strong>Date de publication :</strong> {{ article.publish_date }}</p>
+    </div>
+  </div>
+{% endblock %}
